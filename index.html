@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voicer | Your Agent Command Center</title>
+    <meta
+      name="description"
+      content="Voicer lets you talk to your OpenClaw agents, get concise briefings, make decisions quickly, and keep your automation stack moving."
+    />
+
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="site-bg"></div>
+
+    <header class="nav" id="top">
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="Voicer Home">
+          <img src="assets/logo.svg" alt="Voicer logo" />
+          <span>Voicer</span>
+        </a>
+
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#how">How it works</a>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <a class="btn btn-primary nav-cta" href="#join">Join waitlist</a>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-primary" href="#join">Join waitlist</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section reveal">
+        <div class="hero-grid container">
+          <div>
+            <p class="eyebrow">Voice-first orchestration for OpenClaw</p>
+            <h1>
+              Talk to your agents,
+              <span>not your backlog.</span>
+            </h1>
+            <p class="hero-copy">
+              Voicer turns your agent swarm into one guided conversation. Get a ranked
+              briefing queue, drill into blockers, decide fast, and push execution forward
+              from desktop or mobile.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary btn-lg" href="#join">Get early access</a>
+              <a class="btn btn-ghost btn-lg" href="#how">See workflow</a>
+            </div>
+            <div class="hero-stats">
+              <div>
+                <strong>3 modes</strong>
+                <span>Browser, OpenAI, ElevenLabs</span>
+              </div>
+              <div>
+                <strong>Persistent memory</strong>
+                <span>Per user, per agent, Firestore-backed</span>
+              </div>
+              <div>
+                <strong>Decision-first UX</strong>
+                <span>Queue, tree, state machine</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="hero-panel" aria-label="Example briefing card">
+            <div class="panel-head">
+              <span class="dot red"></span>
+              <span class="dot amber"></span>
+              <span class="dot green"></span>
+              <p>Live Briefing Queue</p>
+            </div>
+            <div class="panel-body">
+              <article class="queue-item critical">
+                <header>
+                  <h3>Integration agent blocked</h3>
+                  <span>Critical</span>
+                </header>
+                <p>Missing production API credentials for Stripe webhook signing.</p>
+                <div class="queue-tags">
+                  <span>Decision needed</span>
+                  <span>ETA impact: high</span>
+                </div>
+              </article>
+
+              <article class="queue-item high">
+                <header>
+                  <h3>Content agent failed publish</h3>
+                  <span>High</span>
+                </header>
+                <p>CMS payload mismatch. Needs rule for required <code>authorBio</code>.</p>
+                <div class="queue-tags">
+                  <span>Explain term</span>
+                  <span>Choose option</span>
+                </div>
+              </article>
+
+              <article class="queue-item normal">
+                <header>
+                  <h3>Pricing agent awaiting approval</h3>
+                  <span>Normal</span>
+                </header>
+                <p>Approve discount policy for annual billing segment.</p>
+                <div class="queue-tags">
+                  <span>Recommendation ready</span>
+                </div>
+              </article>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section reveal" id="how">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">How it works</p>
+            <h2>From agent noise to clear executive briefings</h2>
+          </div>
+
+          <div class="steps-grid">
+            <article class="step-card">
+              <span>1</span>
+              <h3>Collect</h3>
+              <p>
+                Voicer gathers blockers, decision requests, and status updates across your
+                agents into a single agenda.
+              </p>
+            </article>
+            <article class="step-card">
+              <span>2</span>
+              <h3>Brief</h3>
+              <p>
+                Each issue opens as a navigable tree: summary, root cause, attempts, options,
+                recommendation, and decision node.
+              </p>
+            </article>
+            <article class="step-card">
+              <span>3</span>
+              <h3>Decide</h3>
+              <p>
+                Say “choose option 2”, “go deeper”, or “skip”. Voicer captures intent,
+                persists context, and moves to the next item.
+              </p>
+            </article>
+            <article class="step-card">
+              <span>4</span>
+              <h3>Execute</h3>
+              <p>
+                Decisions route back to your agents through OpenClaw sessions so work keeps
+                flowing without manual handoffs.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="features">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">What you get</p>
+            <h2>Built for high-output operators</h2>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3>Unified voice bridge</h3>
+              <p>Switch STT/TTS providers instantly and keep one control loop across agents.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Long-running memory</h3>
+              <p>Conversations and preferences persist in Firestore by user and agent.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Agenda + tree navigation</h3>
+              <p>Queue at top level, deep drill-down per issue, and resumable context stack.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Decision state machine</h3>
+              <p>Track each issue across <code>new</code>, <code>briefing</code>, <code>awaiting_decision</code>, <code>resolved</code>.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Diagnostics-first</h3>
+              <p>Copy full logs, transcript, and config snapshot when debugging production behavior.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Desktop + mobile</h3>
+              <p>Manage your command center from browser or Expo app with the same backend contract.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="pricing">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Pricing</p>
+            <h2>Start simple, scale with your agent fleet</h2>
+          </div>
+
+          <div class="pricing-grid">
+            <article class="price-card">
+              <h3>Starter</h3>
+              <p class="price">$29<span>/month</span></p>
+              <ul>
+                <li>Up to 5 active agents</li>
+                <li>Voice + text control</li>
+                <li>Firestore conversation memory</li>
+              </ul>
+              <a class="btn btn-ghost" href="#join">Join waitlist</a>
+            </article>
+
+            <article class="price-card featured">
+              <p class="chip">Most popular</p>
+              <h3>Operator</h3>
+              <p class="price">$99<span>/month</span></p>
+              <ul>
+                <li>Up to 30 active agents</li>
+                <li>Briefing queue + decision tree</li>
+                <li>Advanced diagnostics and alerts</li>
+              </ul>
+              <a class="btn btn-primary" href="#join">Join waitlist</a>
+            </article>
+
+            <article class="price-card">
+              <h3>Scale</h3>
+              <p class="price">Custom</p>
+              <ul>
+                <li>Unlimited agents</li>
+                <li>Private cloud routing</li>
+                <li>Dedicated onboarding + support</li>
+              </ul>
+              <a class="btn btn-ghost" href="#join">Talk to us</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="faq">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">FAQ</p>
+            <h2>Questions teams ask before switching</h2>
+          </div>
+
+          <div class="faq-list">
+            <article class="faq-item">
+              <button class="faq-q" type="button">
+                Does Voicer replace OpenClaw?
+                <span>+</span>
+              </button>
+              <div class="faq-a">
+                No. Voicer sits on top as a voice + briefing layer, and routes decisions back to
+                your OpenClaw sessions.
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-q" type="button">
+                Can I use my existing API keys?
+                <span>+</span>
+              </button>
+              <div class="faq-a">
+                Yes. Voicer supports the same auth model and can read configured keys and profiles
+                from your existing setup.
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-q" type="button">
+                Is mobile access local-only?
+                <span>+</span>
+              </button>
+              <div class="faq-a">
+                Local access works now. Cloud relay + desktop connector is the production path for
+                secure remote control.
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-q" type="button">
+                Can Voicer proactively brief me?
+                <span>+</span>
+              </button>
+              <div class="faq-a">
+                Yes. The model is built around queueing only high-signal issues so you can decide
+                quickly without reading raw logs.
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta reveal" id="join">
+        <div class="container cta-card">
+          <h2>Make your agents sound like a real executive assistant.</h2>
+          <p>
+            Join early access and help shape the remote voice workflow before public launch.
+          </p>
+          <a class="btn btn-primary btn-lg" href="mailto:hello@voicer.ai?subject=Voicer%20Early%20Access">
+            Request access
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Voicer. Built for serious operators.</p>
+        <div>
+          <a href="#top">Back to top</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
