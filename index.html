@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Voicer | Your Agent Command Center</title>
+    <title>AIPA | Your AI Personal Assistant</title>
     <meta
       name="description"
-      content="Voicer lets you talk to your OpenClaw agents, get concise briefings, make decisions quickly, and keep your automation stack moving."
+      content="AIPA is a voice-first AI assistant that orchestrates your agents across Slack and Discord. Talk naturally, approve actions, and keep your channels moving."
     />
 
     <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
@@ -24,9 +24,9 @@
 
     <header class="nav" id="top">
       <div class="nav-inner">
-        <a class="brand" href="#top" aria-label="Voicer Home">
-          <img src="assets/logo.svg" alt="Voicer logo" />
-          <span>Voicer</span>
+        <a class="brand" href="#top" aria-label="AIPA Home">
+          <img src="assets/logo.svg" alt="AIPA logo" />
+          <span>AIPA</span>
         </a>
 
         <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu">
@@ -56,15 +56,15 @@
       <section class="hero section reveal">
         <div class="hero-grid container">
           <div>
-            <p class="eyebrow">Voice-first orchestration for OpenClaw</p>
+            <p class="eyebrow">Voice-first agent orchestration</p>
             <h1>
               Talk to your agents,
               <span>not your backlog.</span>
             </h1>
             <p class="hero-copy">
-              Voicer turns your agent swarm into one guided conversation. Get a ranked
-              briefing queue, drill into blockers, decide fast, and push execution forward
-              from desktop or mobile.
+              AIPA turns your Slack and Discord agents into one voice conversation.
+              Get briefed on what needs attention, approve or edit proposed messages,
+              and keep your channels moving — from your phone or browser.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary btn-lg" href="https://app.aipa.site">Open app</a>
@@ -72,60 +72,63 @@
             </div>
             <div class="hero-stats">
               <div>
-                <strong>3 modes</strong>
-                <span>Browser, OpenAI, ElevenLabs</span>
+                <strong>Voice-first</strong>
+                <span>OpenAI Realtime API, 8 voices</span>
               </div>
               <div>
-                <strong>Persistent memory</strong>
-                <span>Per user, per agent, Firestore-backed</span>
+                <strong>Multi-platform</strong>
+                <span>Slack + Discord, one inbox</span>
               </div>
               <div>
-                <strong>Decision-first UX</strong>
-                <span>Queue, tree, state machine</span>
+                <strong>Human-in-the-loop</strong>
+                <span>Approve, edit, or reject actions</span>
               </div>
             </div>
           </div>
 
-          <aside class="hero-panel" aria-label="Example briefing card">
+          <aside class="hero-panel" aria-label="Example action cards">
             <div class="panel-head">
               <span class="dot red"></span>
               <span class="dot amber"></span>
               <span class="dot green"></span>
-              <p>Live Briefing Queue</p>
+              <p>Pending Actions</p>
             </div>
             <div class="panel-body">
               <article class="queue-item critical">
                 <header>
-                  <h3>Integration agent blocked</h3>
-                  <span>Critical</span>
+                  <h3>Slack / #ops-alerts</h3>
+                  <span>Proposed</span>
                 </header>
-                <p>Missing production API credentials for Stripe webhook signing.</p>
+                <p>"Acknowledged — restarting the staging worker now. ETA 5 min."</p>
                 <div class="queue-tags">
-                  <span>Decision needed</span>
-                  <span>ETA impact: high</span>
+                  <span>Approve</span>
+                  <span>Edit</span>
+                  <span>Reject</span>
                 </div>
               </article>
 
               <article class="queue-item high">
                 <header>
-                  <h3>Content agent failed publish</h3>
-                  <span>High</span>
+                  <h3>Discord / #design-review</h3>
+                  <span>Proposed</span>
                 </header>
-                <p>CMS payload mismatch. Needs rule for required <code>authorBio</code>.</p>
+                <p>"Feedback posted — the header spacing looks good, shipping it."</p>
                 <div class="queue-tags">
-                  <span>Explain term</span>
-                  <span>Choose option</span>
+                  <span>Approve</span>
+                  <span>Edit</span>
+                  <span>Reject</span>
                 </div>
               </article>
 
               <article class="queue-item normal">
                 <header>
-                  <h3>Pricing agent awaiting approval</h3>
-                  <span>Normal</span>
+                  <h3>Slack / #eng-standup</h3>
+                  <span>Proposed</span>
                 </header>
-                <p>Approve discount policy for annual billing segment.</p>
+                <p>"Sprint update: auth migration done, starting API docs today."</p>
                 <div class="queue-tags">
-                  <span>Recommendation ready</span>
+                  <span>Approve</span>
+                  <span>Edit</span>
                 </div>
               </article>
             </div>
@@ -137,40 +140,40 @@
         <div class="container">
           <div class="section-head">
             <p class="eyebrow">How it works</p>
-            <h2>From agent noise to clear executive briefings</h2>
+            <h2>From channel noise to clear action</h2>
           </div>
 
           <div class="steps-grid">
             <article class="step-card">
               <span>1</span>
-              <h3>Collect</h3>
+              <h3>Connect</h3>
               <p>
-                Voicer gathers blockers, decision requests, and status updates across your
-                agents into a single agenda.
+                Add your Slack and Discord bot tokens. Create agents and link them
+                to the channels they should watch.
               </p>
             </article>
             <article class="step-card">
               <span>2</span>
-              <h3>Brief</h3>
+              <h3>Talk</h3>
               <p>
-                Each issue opens as a navigable tree: summary, root cause, attempts, options,
-                recommendation, and decision node.
+                Start a voice session. AIPA reads your channels, identifies what
+                needs attention, and briefs you conversationally.
               </p>
             </article>
             <article class="step-card">
               <span>3</span>
               <h3>Decide</h3>
               <p>
-                Say “choose option 2”, “go deeper”, or “skip”. Voicer captures intent,
-                persists context, and moves to the next item.
+                AIPA proposes messages to send. Approve them as-is, edit the
+                wording, or reject. You stay in control.
               </p>
             </article>
             <article class="step-card">
               <span>4</span>
-              <h3>Execute</h3>
+              <h3>Send</h3>
               <p>
-                Decisions route back to your agents through OpenClaw sessions so work keeps
-                flowing without manual handoffs.
+                Approved messages go straight to Slack or Discord. Reply to threads,
+                post updates, and keep work flowing hands-free.
               </p>
             </article>
           </div>
@@ -181,33 +184,33 @@
         <div class="container">
           <div class="section-head">
             <p class="eyebrow">What you get</p>
-            <h2>Built for high-output operators</h2>
+            <h2>Built for operators who run on Slack and Discord</h2>
           </div>
 
           <div class="feature-grid">
             <article class="feature-card">
-              <h3>Unified voice bridge</h3>
-              <p>Switch STT/TTS providers instantly and keep one control loop across agents.</p>
+              <h3>OpenAI Realtime voice</h3>
+              <p>Natural voice conversations powered by GPT-4o Realtime with 8 voice options and configurable VAD.</p>
             </article>
             <article class="feature-card">
-              <h3>Long-running memory</h3>
-              <p>Conversations and preferences persist in Firestore by user and agent.</p>
+              <h3>Multi-agent management</h3>
+              <p>Create named agents, each linked to specific Slack and Discord channels. One inbox for all of them.</p>
             </article>
             <article class="feature-card">
-              <h3>Agenda + tree navigation</h3>
-              <p>Queue at top level, deep drill-down per issue, and resumable context stack.</p>
+              <h3>Human-in-the-loop actions</h3>
+              <p>Every proposed message goes through you. Approve, edit inline, or reject — nothing sends without your OK.</p>
             </article>
             <article class="feature-card">
-              <h3>Decision state machine</h3>
-              <p>Track each issue across <code>new</code>, <code>briefing</code>, <code>awaiting_decision</code>, <code>resolved</code>.</p>
+              <h3>Channel history + quick reply</h3>
+              <p>Browse recent messages across your agents' channels and reply directly from the app.</p>
             </article>
             <article class="feature-card">
-              <h3>Diagnostics-first</h3>
-              <p>Copy full logs, transcript, and config snapshot when debugging production behavior.</p>
+              <h3>Multi-LLM support</h3>
+              <p>Bring your own keys for OpenAI, Anthropic, or Gemini. Configure preferred order and auth method.</p>
             </article>
             <article class="feature-card">
-              <h3>Desktop + mobile</h3>
-              <p>Manage your command center from browser or Expo app with the same backend contract.</p>
+              <h3>Native iOS + web</h3>
+              <p>Native SwiftUI app for iPhone. Web app at app.aipa.site. Same workflow, wherever you are.</p>
             </article>
           </div>
         </div>
@@ -223,34 +226,34 @@
           <div class="pricing-grid">
             <article class="price-card">
               <h3>Starter</h3>
-              <p class="price">$29<span>/month</span></p>
+              <p class="price">Free</p>
               <ul>
-                <li>Up to 5 active agents</li>
+                <li>Up to 3 agents</li>
                 <li>Voice + text control</li>
-                <li>Firestore conversation memory</li>
+                <li>Bring your own API keys</li>
               </ul>
-              <a class="btn btn-ghost" href="https://app.aipa.site">Open app</a>
+              <a class="btn btn-ghost" href="https://app.aipa.site">Get started</a>
             </article>
 
             <article class="price-card featured">
               <p class="chip">Most popular</p>
               <h3>Operator</h3>
-              <p class="price">$99<span>/month</span></p>
+              <p class="price">$29<span>/month</span></p>
               <ul>
-                <li>Up to 30 active agents</li>
-                <li>Briefing queue + decision tree</li>
-                <li>Advanced diagnostics and alerts</li>
+                <li>Unlimited agents</li>
+                <li>Slack + Discord</li>
+                <li>Priority voice sessions</li>
               </ul>
               <a class="btn btn-primary" href="https://app.aipa.site">Open app</a>
             </article>
 
             <article class="price-card">
-              <h3>Scale</h3>
+              <h3>Team</h3>
               <p class="price">Custom</p>
               <ul>
-                <li>Unlimited agents</li>
-                <li>Private cloud routing</li>
-                <li>Dedicated onboarding + support</li>
+                <li>Multiple operators</li>
+                <li>Shared agent configs</li>
+                <li>Dedicated support</li>
               </ul>
               <a class="btn btn-ghost" href="https://app.aipa.site">Contact us</a>
             </article>
@@ -262,51 +265,51 @@
         <div class="container">
           <div class="section-head">
             <p class="eyebrow">FAQ</p>
-            <h2>Questions teams ask before switching</h2>
+            <h2>Common questions</h2>
           </div>
 
           <div class="faq-list">
             <article class="faq-item">
               <button class="faq-q" type="button">
-                Does Voicer replace OpenClaw?
+                What platforms does AIPA support?
                 <span>+</span>
               </button>
               <div class="faq-a">
-                No. Voicer sits on top as a voice + briefing layer, and routes decisions back to
-                your OpenClaw sessions.
+                AIPA connects to Slack and Discord using bot tokens you provide.
+                You can link any combination of channels from both platforms to your agents.
               </div>
             </article>
 
             <article class="faq-item">
               <button class="faq-q" type="button">
-                Can I use my existing API keys?
+                Do I need my own API keys?
                 <span>+</span>
               </button>
               <div class="faq-a">
-                Yes. Voicer supports the same auth model and can read configured keys and profiles
-                from your existing setup.
+                Yes. AIPA uses your own OpenAI, Anthropic, or Gemini API keys for LLM calls,
+                and your own Slack/Discord bot tokens for channel access. Your keys stay on your device.
               </div>
             </article>
 
             <article class="faq-item">
               <button class="faq-q" type="button">
-                Is mobile access local-only?
+                Can AIPA send messages without my approval?
                 <span>+</span>
               </button>
               <div class="faq-a">
-                Local access works now. Cloud relay + desktop connector is the production path for
-                secure remote control.
+                No. Every proposed action appears in your inbox as a card you can approve, edit,
+                or reject. Nothing is sent to any channel without your explicit approval.
               </div>
             </article>
 
             <article class="faq-item">
               <button class="faq-q" type="button">
-                Can Voicer proactively brief me?
+                Is there a mobile app?
                 <span>+</span>
               </button>
               <div class="faq-a">
-                Yes. The model is built around queueing only high-signal issues so you can decide
-                quickly without reading raw logs.
+                Yes. AIPA has a native iOS app built with SwiftUI, optimized for voice-first
+                interaction on iPhone. The web app works on any device.
               </div>
             </article>
           </div>
@@ -315,9 +318,10 @@
 
       <section class="section cta reveal" id="join">
         <div class="container cta-card">
-          <h2>Make your agents sound like a real executive assistant.</h2>
+          <h2>Your agents are talking. Start listening.</h2>
           <p>
-            Join early access and help shape the remote voice workflow before public launch.
+            AIPA gives you a voice interface to your Slack and Discord agents.
+            Approve actions, reply to threads, and stay in the loop — hands-free.
           </p>
           <a class="btn btn-primary btn-lg" href="https://app.aipa.site">
             Open app
@@ -328,7 +332,7 @@
 
     <footer class="footer">
       <div class="container footer-inner">
-        <p>© <span id="year"></span> Voicer. Built for serious operators.</p>
+        <p>&copy; <span id="year"></span> AIPA. Built for serious operators.</p>
         <div>
           <a href="#top">Back to top</a>
         </div>
