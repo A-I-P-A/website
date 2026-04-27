@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connect AIPA to Gmail | AIPA</title>
+    <meta name="description" content="Connect AIPA to your Gmail inbox. Get voice briefings on your email and draft replies hands-free." />
+    <link rel="icon" href="../assets/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      .install-page { max-width: 720px; margin: 0 auto; padding: 120px 24px 80px; }
+      .install-page h1 { font-family: "Sora", sans-serif; font-size: 2rem; margin-bottom: 0.5rem; }
+      .install-page .subtitle { color: var(--muted); font-size: 1.1rem; margin-bottom: 2rem; }
+      .install-page h2 { font-family: "Sora", sans-serif; font-size: 1.25rem; margin-top: 2.5rem; }
+      .install-page p, .install-page li { line-height: 1.7; }
+      .install-page ul { padding-left: 1.5rem; }
+      .install-page a { color: var(--teal); }
+      .install-page code { background: var(--surface-alt); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+      .app-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 1.5rem; margin: 1.5rem 0; }
+      .app-card h3 { font-family: "Sora", sans-serif; margin: 0 0 0.5rem; font-size: 1.1rem; }
+      .app-card p { margin: 0.5rem 0 1rem; color: var(--muted); font-size: 0.95rem; }
+      .scope-list { font-size: 0.85rem; color: var(--muted); margin: 0.5rem 0; }
+      .scope-list code { font-size: 0.8rem; }
+      .install-btn { display: inline-block; background: var(--teal); color: white; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+      .install-btn:hover { background: var(--teal-strong); }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="/" aria-label="AIPA Home">
+          <img src="../assets/logo.svg" alt="AIPA logo" />
+          <span>AIPA</span>
+        </a>
+      </div>
+    </header>
+
+    <div class="install-page">
+      <h1>Connect AIPA to Gmail</h1>
+      <p class="subtitle">Get voice briefings on your inbox and draft email replies hands-free.</p>
+
+      <div class="app-card">
+        <h3>Gmail Connection</h3>
+        <p>AIPA connects to your Gmail account using Google OAuth. It can read your emails and send replies on your behalf.</p>
+        <div class="scope-list">
+          <strong>Scopes:</strong> <code>gmail.readonly</code>, <code>gmail.send</code>, <code>gmail.modify</code>
+        </div>
+        <p style="margin-top: 1rem;">
+          <a class="install-btn" href="https://app.aipa.site/gmail/install">Connect Gmail</a>
+        </p>
+      </div>
+
+      <h2>What happens after connecting</h2>
+      <ul>
+        <li>AIPA securely stores a refresh token to access your Gmail</li>
+        <li>Open the AIPA iOS app, your Gmail appears as a connection</li>
+        <li>Create an agent and link it to Gmail labels (INBOX, etc.)</li>
+        <li>Ask your agent: "What's in my inbox?" or "Any emails from Sarah?"</li>
+        <li>Draft replies by voice: "Reply to Sarah saying I'll be there at 3"</li>
+      </ul>
+
+      <h2>What AIPA can do with Gmail</h2>
+      <ul>
+        <li>Read emails from any label (INBOX, Sent, custom labels)</li>
+        <li>Summarize email threads and highlight what needs attention</li>
+        <li>Draft and send replies (with your approval)</li>
+        <li>Cross-reference email with your Slack activity for context</li>
+      </ul>
+
+      <h2>Privacy</h2>
+      <p>Emails are fetched directly from Gmail's API to your device. AIPA does not store your email content on any server. See our <a href="/privacy.html">Privacy Policy</a>.</p>
+    </div>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> AIPA.</p>
+        <div>
+          <a href="/">Home</a> &middot;
+          <a href="/privacy.html">Privacy</a> &middot;
+          <a href="/terms.html">Terms</a> &middot;
+          <a href="/support.html">Support</a>
+        </div>
+      </div>
+    </footer>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  </body>
+</html>

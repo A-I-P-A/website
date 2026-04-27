@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support | AIPA</title>
+    <meta name="description" content="Get help with AIPA." />
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      .legal { max-width: 720px; margin: 0 auto; padding: 120px 24px 80px; }
+      .legal h1 { font-family: "Sora", sans-serif; font-size: 2rem; margin-bottom: 0.5rem; }
+      .legal h2 { font-family: "Sora", sans-serif; font-size: 1.25rem; margin-top: 2rem; }
+      .legal p, .legal li { line-height: 1.7; color: var(--ink); }
+      .legal ul { padding-left: 1.5rem; }
+      .legal a { color: var(--teal); }
+      .contact-card { background: var(--surface); border-radius: var(--radius-lg); padding: 2rem; margin-top: 1.5rem; border: 1px solid var(--line); }
+      .contact-card h3 { font-family: "Sora", sans-serif; margin: 0 0 0.5rem; }
+      .contact-card p { margin: 0; }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="/" aria-label="AIPA Home">
+          <img src="assets/logo.svg" alt="AIPA logo" />
+          <span>AIPA</span>
+        </a>
+      </div>
+    </header>
+
+    <div class="legal">
+      <h1>Support</h1>
+
+      <h2>Getting Started</h2>
+      <p>AIPA connects to your Slack workspace and gives you a voice interface to your channels. To get started:</p>
+      <ul>
+        <li>Install the iOS app from TestFlight or the App Store</li>
+        <li>Connect your Slack workspace via <a href="/install/slack.html">Install AIPA for Slack</a></li>
+        <li>Add your LLM API key (OpenAI required for voice, Anthropic/Gemini optional)</li>
+        <li>Create an agent and link it to channels</li>
+        <li>Tap Connect and start talking</li>
+      </ul>
+
+      <h2>Common Issues</h2>
+
+      <h3>Voice not working</h3>
+      <p>Make sure you have an OpenAI API key configured in Settings. The Realtime API requires an OpenAI key specifically.</p>
+
+      <h3>Can't read channels</h3>
+      <p>The AIPA bot must be a member of the channels your agent monitors. Invite the bot to the channel in Slack: <code>/invite @AIPA</code>.</p>
+
+      <h3>Messages not sending</h3>
+      <p>Check that the agent is not in read-only mode (Agent Settings). For sending as yourself, you need AIPA Personal installed with user-level OAuth.</p>
+
+      <h2>Contact Us</h2>
+
+      <div class="contact-card">
+        <h3>Email Support</h3>
+        <p><a href="mailto:support@aipa.site">support@aipa.site</a></p>
+      </div>
+
+      <div class="contact-card">
+        <h3>GitHub</h3>
+        <p><a href="https://github.com/A-I-P-A">github.com/A-I-P-A</a></p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> AIPA.</p>
+        <div>
+          <a href="/">Home</a> &middot;
+          <a href="/privacy.html">Privacy</a> &middot;
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </footer>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  </body>
+</html>

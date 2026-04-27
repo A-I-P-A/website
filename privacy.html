@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy | AIPA</title>
+    <meta name="description" content="AIPA Privacy Policy — how we handle your data." />
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      .legal { max-width: 720px; margin: 0 auto; padding: 120px 24px 80px; }
+      .legal h1 { font-family: "Sora", sans-serif; font-size: 2rem; margin-bottom: 0.5rem; }
+      .legal .updated { color: var(--muted); font-size: 0.875rem; margin-bottom: 2rem; }
+      .legal h2 { font-family: "Sora", sans-serif; font-size: 1.25rem; margin-top: 2rem; }
+      .legal p, .legal li { line-height: 1.7; color: var(--ink); }
+      .legal ul { padding-left: 1.5rem; }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="/" aria-label="AIPA Home">
+          <img src="assets/logo.svg" alt="AIPA logo" />
+          <span>AIPA</span>
+        </a>
+      </div>
+    </header>
+
+    <div class="legal">
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: April 27, 2026</p>
+
+      <h2>Overview</h2>
+      <p>AIPA ("we", "our", "the app") is a voice-first AI assistant that connects to your messaging platforms (Slack, Discord, Gmail) and tools via MCP. We are committed to protecting your privacy. This policy explains what data we collect, how we use it, and your rights.</p>
+
+      <h2>Data We Collect</h2>
+      <p>AIPA operates with a <strong>local-first architecture</strong>. Your data stays on your device.</p>
+      <ul>
+        <li><strong>Platform tokens</strong> (Slack bot/user tokens, Gmail OAuth tokens) — stored in your device's Keychain, never sent to our servers.</li>
+        <li><strong>Channel messages</strong> — fetched from platform APIs and cached locally on your device. Never stored on our servers.</li>
+        <li><strong>Agent memory</strong> — structured memories your agents learn over time, stored in your device's Keychain.</li>
+        <li><strong>Voice conversations</strong> — processed by OpenAI's Realtime API using your own API key. We do not store or have access to your voice data.</li>
+        <li><strong>LLM API keys</strong> — your OpenAI, Anthropic, or Gemini keys are stored in your device's Keychain and used to make API calls directly from your device.</li>
+      </ul>
+
+      <h2>Data We Do NOT Collect</h2>
+      <ul>
+        <li>We do not store your messages on our servers.</li>
+        <li>We do not have access to your Slack, Discord, or Gmail content.</li>
+        <li>We do not sell or share your data with third parties.</li>
+        <li>We do not track your usage behavior or analytics.</li>
+        <li>We do not store your voice recordings.</li>
+      </ul>
+
+      <h2>OAuth and Platform Access</h2>
+      <p>When you install AIPA to a Slack workspace, we use OAuth to obtain access tokens. These tokens are stored in two places:</p>
+      <ul>
+        <li><strong>Firestore</strong> — during OAuth flow, we temporarily store the bot token and workspace ID so the iOS app can sync new installations. This is the only data that touches our servers.</li>
+        <li><strong>Your device Keychain</strong> — after sync, tokens are stored locally and used for all API calls.</li>
+      </ul>
+
+      <h2>AIPA Personal (Send-as-You Mode)</h2>
+      <p>If you choose to install AIPA Personal, you grant user-level OAuth scopes that allow the app to read and write messages as you. This means:</p>
+      <ul>
+        <li>Messages sent by AIPA Personal appear as if sent by you — other users cannot distinguish them.</li>
+        <li>You control which channels have auto-reply enabled and can disable it at any time.</li>
+        <li>All auto-sent messages are logged on your device with a full audit trail.</li>
+      </ul>
+
+      <h2>Third-Party Services</h2>
+      <p>AIPA connects to third-party APIs using your own credentials:</p>
+      <ul>
+        <li><strong>OpenAI</strong> — for voice (Realtime API) and text processing</li>
+        <li><strong>Anthropic</strong> — for text tasks and Claude Agents</li>
+        <li><strong>Google/Gemini</strong> — for text processing</li>
+        <li><strong>Slack API</strong> — for reading/writing messages</li>
+        <li><strong>MCP servers</strong> — for connecting to external tools you configure</li>
+      </ul>
+      <p>Each service has its own privacy policy. We recommend reviewing them.</p>
+
+      <h2>Data Retention</h2>
+      <p>All user data is stored on your device. Deleting the app removes all local data. Uninstalling from a Slack workspace revokes the bot token. You can delete your data at any time by removing agents in the app or deleting the app entirely.</p>
+
+      <h2>Children's Privacy</h2>
+      <p>AIPA is not intended for children under 13. We do not knowingly collect data from children.</p>
+
+      <h2>Changes to This Policy</h2>
+      <p>We may update this policy from time to time. Changes will be posted on this page with an updated date.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about this privacy policy? Email us at <a href="mailto:privacy@aipa.site">privacy@aipa.site</a>.</p>
+    </div>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> AIPA.</p>
+        <div>
+          <a href="/">Home</a> &middot;
+          <a href="/terms.html">Terms</a> &middot;
+          <a href="/support.html">Support</a>
+        </div>
+      </div>
+    </footer>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  </body>
+</html>
