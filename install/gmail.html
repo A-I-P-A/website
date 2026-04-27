@@ -3,29 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Connect AIPA to Gmail | AIPA</title>
-    <meta name="description" content="Connect AIPA to your Gmail inbox. Get voice briefings on your email and draft replies hands-free." />
+    <title>Connect Gmail | AIPA</title>
+    <meta name="description" content="Connect AIPA to your Gmail. Voice briefings on your inbox, draft replies hands-free." />
     <link rel="icon" href="../assets/logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="../styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
     <style>
-      .install-page { max-width: 720px; margin: 0 auto; padding: 120px 24px 80px; }
+      .install-page { max-width: 640px; margin: 0 auto; padding: 120px 24px 80px; }
       .install-page h1 { font-family: "Sora", sans-serif; font-size: 2rem; margin-bottom: 0.5rem; }
-      .install-page .subtitle { color: var(--muted); font-size: 1.1rem; margin-bottom: 2rem; }
-      .install-page h2 { font-family: "Sora", sans-serif; font-size: 1.25rem; margin-top: 2.5rem; }
+      .install-page .subtitle { color: var(--muted); font-size: 1.05rem; margin-bottom: 2rem; line-height: 1.6; }
+      .install-page h2 { font-family: "Sora", sans-serif; font-size: 1.15rem; margin-top: 2.5rem; }
       .install-page p, .install-page li { line-height: 1.7; }
       .install-page ul { padding-left: 1.5rem; }
       .install-page a { color: var(--teal); }
-      .install-page code { background: var(--surface-alt); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
-      .app-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 1.5rem; margin: 1.5rem 0; }
-      .app-card h3 { font-family: "Sora", sans-serif; margin: 0 0 0.5rem; font-size: 1.1rem; }
-      .app-card p { margin: 0.5rem 0 1rem; color: var(--muted); font-size: 0.95rem; }
-      .scope-list { font-size: 0.85rem; color: var(--muted); margin: 0.5rem 0; }
-      .scope-list code { font-size: 0.8rem; }
-      .install-btn { display: inline-block; background: var(--teal); color: white; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; }
-      .install-btn:hover { background: var(--teal-strong); }
+      .app-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 1.5rem 1.5rem 1.25rem; margin: 1.5rem 0; }
+      .app-card h3 { font-family: "Sora", sans-serif; margin: 0 0 0.25rem; font-size: 1.05rem; }
+      .app-card .desc { margin: 0.25rem 0 1rem; color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
+      .install-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--teal); color: white; padding: 12px 28px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: background 0.15s; }
+      .install-btn:hover { background: var(--teal-strong); color: white; }
+      .install-btn svg { width: 20px; height: 20px; }
+      .platforms { display: flex; gap: 12px; margin-top: 1rem; font-size: 0.85rem; }
+      .platforms a { color: var(--muted); text-decoration: none; padding: 4px 0; border-bottom: 1px solid transparent; }
+      .platforms a:hover { color: var(--teal); border-color: var(--teal); }
     </style>
   </head>
   <body>
@@ -35,43 +36,46 @@
           <img src="../assets/logo.svg" alt="AIPA logo" />
           <span>AIPA</span>
         </a>
+        <div class="platforms">
+          <a href="/install/slack.html">Slack</a>
+          <a href="/install/gmail.html"><strong>Gmail</strong></a>
+          <a href="/install/discord.html">Discord</a>
+        </div>
       </div>
     </header>
 
     <div class="install-page">
-      <h1>Connect AIPA to Gmail</h1>
-      <p class="subtitle">Get voice briefings on your inbox and draft email replies hands-free.</p>
+      <h1>Connect Gmail</h1>
+      <p class="subtitle">AIPA reads your inbox and briefs you by voice. "What's new?" "Any emails from Sarah?" "Reply saying I'll be there at 3."</p>
 
       <div class="app-card">
         <h3>Gmail Connection</h3>
-        <p>AIPA connects to your Gmail account using Google OAuth. It can read your emails and send replies on your behalf.</p>
-        <div class="scope-list">
-          <strong>Scopes:</strong> <code>gmail.readonly</code>, <code>gmail.send</code>, <code>gmail.modify</code>
-        </div>
-        <p style="margin-top: 1rem;">
-          <a class="install-btn" href="https://app.aipa.site/gmail/install">Connect Gmail</a>
-        </p>
+        <p class="desc">AIPA connects to your Gmail via Google OAuth. It can read your emails, summarize threads, and send replies on your behalf.</p>
+        <a class="install-btn" href="https://app.aipa.site/gmail/install">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M13 12H3"/></svg>
+          Connect Gmail
+        </a>
       </div>
 
-      <h2>What happens after connecting</h2>
+      <h2>After connecting</h2>
       <ul>
-        <li>AIPA securely stores a refresh token to access your Gmail</li>
-        <li>Open the AIPA iOS app, your Gmail appears as a connection</li>
+        <li>Open the AIPA app on your iPhone</li>
+        <li>Your Gmail appears as a connection</li>
         <li>Create an agent and link it to Gmail labels (INBOX, etc.)</li>
-        <li>Ask your agent: "What's in my inbox?" or "Any emails from Sarah?"</li>
+        <li>Ask: "What's in my inbox?" or "Any emails from Sarah?"</li>
         <li>Draft replies by voice: "Reply to Sarah saying I'll be there at 3"</li>
       </ul>
 
-      <h2>What AIPA can do with Gmail</h2>
+      <h2>What AIPA does with Gmail</h2>
       <ul>
-        <li>Read emails from any label (INBOX, Sent, custom labels)</li>
-        <li>Summarize email threads and highlight what needs attention</li>
-        <li>Draft and send replies (with your approval)</li>
-        <li>Cross-reference email with your Slack activity for context</li>
+        <li>Reads emails from any label</li>
+        <li>Summarizes threads and highlights what needs attention</li>
+        <li>Drafts and sends replies (with your approval)</li>
+        <li>Cross-references email with your Slack for context</li>
       </ul>
 
       <h2>Privacy</h2>
-      <p>Emails are fetched directly from Gmail's API to your device. AIPA does not store your email content on any server. See our <a href="/privacy.html">Privacy Policy</a>.</p>
+      <p>Emails go directly from Gmail to your device. AIPA does not store your email on any server. <a href="/privacy.html">Privacy Policy</a></p>
     </div>
 
     <footer class="footer">

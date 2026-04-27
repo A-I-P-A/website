@@ -3,33 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Install AIPA for Slack | AIPA</title>
-    <meta name="description" content="Connect AIPA to your Slack workspace. Get voice briefings and AI-powered replies for your channels." />
+    <title>Connect Slack | AIPA</title>
+    <meta name="description" content="Connect AIPA to your Slack workspace. Get voice briefings and AI-powered replies." />
     <link rel="icon" href="../assets/logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="../styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
     <style>
-      .install-page { max-width: 720px; margin: 0 auto; padding: 120px 24px 80px; }
+      .install-page { max-width: 640px; margin: 0 auto; padding: 120px 24px 80px; }
       .install-page h1 { font-family: "Sora", sans-serif; font-size: 2rem; margin-bottom: 0.5rem; }
-      .install-page .subtitle { color: var(--muted); font-size: 1.1rem; margin-bottom: 2rem; }
-      .install-page h2 { font-family: "Sora", sans-serif; font-size: 1.25rem; margin-top: 2.5rem; }
+      .install-page .subtitle { color: var(--muted); font-size: 1.05rem; margin-bottom: 2rem; line-height: 1.6; }
+      .install-page h2 { font-family: "Sora", sans-serif; font-size: 1.15rem; margin-top: 2.5rem; }
       .install-page p, .install-page li { line-height: 1.7; }
       .install-page ul { padding-left: 1.5rem; }
       .install-page a { color: var(--teal); }
-      .install-page code { background: var(--surface-alt); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
       .app-cards { display: grid; gap: 1rem; margin: 1.5rem 0; }
-      .app-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 1.5rem; }
-      .app-card h3 { font-family: "Sora", sans-serif; margin: 0 0 0.5rem; font-size: 1.1rem; }
-      .app-card .badge { display: inline-block; font-size: 0.75rem; font-weight: 600; padding: 2px 8px; border-radius: 8px; margin-left: 8px; }
-      .badge-safe { background: #dcfce7; color: #166534; }
-      .badge-advanced { background: #fef3c7; color: #92400e; }
-      .app-card p { margin: 0.5rem 0 1rem; color: var(--muted); font-size: 0.95rem; }
-      .scope-list { font-size: 0.85rem; color: var(--muted); margin: 0.5rem 0; }
-      .scope-list code { font-size: 0.8rem; }
-      .install-btn { display: inline-block; background: var(--teal); color: white; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; }
-      .install-btn:hover { background: var(--teal-strong); }
+      .app-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 1.5rem 1.5rem 1.25rem; }
+      .app-card h3 { font-family: "Sora", sans-serif; margin: 0 0 0.25rem; font-size: 1.05rem; display: flex; align-items: center; gap: 8px; }
+      .badge { display: inline-block; font-size: 0.7rem; font-weight: 600; padding: 2px 8px; border-radius: 8px; }
+      .badge-rec { background: #dcfce7; color: #166534; }
+      .badge-adv { background: #fef3c7; color: #92400e; }
+      .app-card .desc { margin: 0.25rem 0 1rem; color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
+      .app-card .perms { font-size: 0.8rem; color: var(--muted); margin: 0 0 1rem; line-height: 1.5; }
+      .app-card .warn { font-size: 0.8rem; color: var(--muted); margin: 0.75rem 0 0; line-height: 1.5; }
+      .install-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--teal); color: white; padding: 12px 28px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: background 0.15s; }
+      .install-btn:hover { background: var(--teal-strong); color: white; }
+      .install-btn svg { width: 20px; height: 20px; }
+      .platforms { display: flex; gap: 12px; margin-top: 1rem; font-size: 0.85rem; }
+      .platforms a { color: var(--muted); text-decoration: none; padding: 4px 0; border-bottom: 1px solid transparent; }
+      .platforms a:hover { color: var(--teal); border-color: var(--teal); }
+      .compare { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.875rem; }
+      .compare th { text-align: left; padding: 8px 12px; border-bottom: 2px solid var(--line); font-weight: 600; }
+      .compare td { padding: 8px 12px; border-bottom: 1px solid var(--line); }
+      .compare tr:last-child td { border-bottom: none; }
     </style>
   </head>
   <body>
@@ -39,89 +46,65 @@
           <img src="../assets/logo.svg" alt="AIPA logo" />
           <span>AIPA</span>
         </a>
+        <div class="platforms">
+          <a href="/install/slack.html"><strong>Slack</strong></a>
+          <a href="/install/gmail.html">Gmail</a>
+          <a href="/install/discord.html">Discord</a>
+        </div>
       </div>
     </header>
 
     <div class="install-page">
-      <h1>Install AIPA for Slack</h1>
-      <p class="subtitle">Choose the right mode for how you want AIPA to work in your workspace.</p>
+      <h1>Connect Slack</h1>
+      <p class="subtitle">AIPA monitors your Slack channels and briefs you by voice. Choose how you want it to work.</p>
 
       <div class="app-cards">
         <div class="app-card">
-          <h3>AIPA Bot <span class="badge badge-safe">Recommended</span></h3>
-          <p>AIPA joins your channels as a bot. It can read messages and send replies labeled <code>[via AIPA]</code>. Other users see the bot as a separate user. Workspace admins can easily manage permissions.</p>
-          <div class="scope-list">
-            <strong>Bot scopes:</strong> <code>channels:history</code>, <code>channels:read</code>, <code>chat:write</code>, <code>groups:history</code>, <code>groups:read</code>, <code>im:history</code>, <code>im:read</code>, <code>mpim:history</code>, <code>mpim:read</code>, <code>users:read</code>
-          </div>
-          <p style="margin-top: 1rem;">
-            <a class="install-btn" href="https://app.aipa.site/slack/install">Install AIPA Bot</a>
-          </p>
+          <h3>Bot Mode <span class="badge badge-rec">Recommended</span></h3>
+          <p class="desc">AIPA joins as a bot. Reads your channels, drafts replies labeled <strong>[via AIPA]</strong>. Other people see it as a separate user. Easy to set up, easy for admins to manage.</p>
+          <p class="perms">Reads public/private channels, DMs. Sends as bot. Needs to be invited to each channel.</p>
+          <a class="install-btn" href="https://app.aipa.site/slack/install">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M13 12H3"/></svg>
+            Connect with Slack
+          </a>
         </div>
 
         <div class="app-card">
-          <h3>AIPA Personal <span class="badge badge-advanced">Advanced</span></h3>
-          <p>AIPA reads and writes as <strong>you</strong>. No bot user, no <code>[via AIPA]</code> prefix. Messages appear as if you typed them. Other users cannot tell the difference. Use this for the full digital twin experience.</p>
-          <div class="scope-list">
-            <strong>User scopes:</strong> <code>channels:history</code>, <code>channels:read</code>, <code>chat:write</code>, <code>groups:history</code>, <code>groups:read</code>, <code>im:history</code>, <code>im:read</code>, <code>mpim:history</code>, <code>mpim:read</code>, <code>users:read</code>
-          </div>
-          <p style="font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem;">
-            By installing AIPA Personal, you authorize AIPA to send messages as your Slack identity. You are responsible for all messages sent. <a href="/terms.html">Terms of Service</a> apply.
-          </p>
-          <p style="margin-top: 1rem;">
-            <a class="install-btn" href="https://app.aipa.site/slack-personal/install">Install AIPA Personal</a>
-          </p>
+          <h3>Personal Mode <span class="badge badge-adv">Advanced</span></h3>
+          <p class="desc">AIPA reads and writes as <strong>you</strong>. No bot user, no labels. Messages look like you typed them. For the full digital twin experience.</p>
+          <p class="perms">Same access as you. Sees everything you can see. No channel invites needed.</p>
+          <a class="install-btn" href="https://app.aipa.site/slack-personal/install">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M13 12H3"/></svg>
+            Connect as You
+          </a>
+          <p class="warn">By connecting, you authorize AIPA to send messages as your identity. You are responsible for all messages sent. <a href="/terms.html">Terms</a> apply.</p>
         </div>
       </div>
 
-      <h2>What happens after install</h2>
+      <h2>After connecting</h2>
       <ul>
-        <li>AIPA connects to your workspace and discovers channels</li>
-        <li>Open the AIPA iOS app, your workspace appears automatically</li>
-        <li>Create an agent and link it to the channels you want to monitor</li>
-        <li>For AIPA Bot: invite the bot to channels with <code>/invite @AIPA</code></li>
-        <li>For AIPA Personal: no invite needed, AIPA sees everything you can see</li>
+        <li>Open the AIPA app on your iPhone</li>
+        <li>Your workspace appears automatically</li>
+        <li>Create an agent and pick which channels to monitor</li>
+        <li>Tap Connect and say "brief me"</li>
       </ul>
 
       <h2>Which should I choose?</h2>
-      <table style="width:100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem;">
+      <table class="compare">
         <thead>
-          <tr style="text-align:left; border-bottom: 2px solid var(--line);">
-            <th style="padding: 8px 12px;"></th>
-            <th style="padding: 8px 12px;">AIPA Bot</th>
-            <th style="padding: 8px 12px;">AIPA Personal</th>
-          </tr>
+          <tr><th></th><th>Bot</th><th>Personal</th></tr>
         </thead>
         <tbody>
-          <tr style="border-bottom: 1px solid var(--line);">
-            <td style="padding: 8px 12px;">Messages appear as</td>
-            <td style="padding: 8px 12px;">Bot user (labeled)</td>
-            <td style="padding: 8px 12px;">You (indistinguishable)</td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--line);">
-            <td style="padding: 8px 12px;">Channel access</td>
-            <td style="padding: 8px 12px;">Must be invited to each channel</td>
-            <td style="padding: 8px 12px;">Sees everything you can see</td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--line);">
-            <td style="padding: 8px 12px;">Admin approval</td>
-            <td style="padding: 8px 12px;">Standard bot install</td>
-            <td style="padding: 8px 12px;">User-level OAuth only</td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--line);">
-            <td style="padding: 8px 12px;">Auto-reply capable</td>
-            <td style="padding: 8px 12px;">Yes (as bot)</td>
-            <td style="padding: 8px 12px;">Yes (as you)</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px 12px;">Best for</td>
-            <td style="padding: 8px 12px;">Getting started, team visibility</td>
-            <td style="padding: 8px 12px;">Digital twin, full autonomy</td>
-          </tr>
+          <tr><td>Messages appear as</td><td>Bot (labeled)</td><td>You</td></tr>
+          <tr><td>Channel access</td><td>Invited channels</td><td>Everything you see</td></tr>
+          <tr><td>Admin approval</td><td>Standard</td><td>Not needed</td></tr>
+          <tr><td>Auto-reply</td><td>As bot</td><td>As you</td></tr>
+          <tr><td>Best for</td><td>Getting started</td><td>Full autonomy</td></tr>
         </tbody>
       </table>
 
-      <h2>Privacy and Security</h2>
-      <p>All messages are processed on your device. AIPA does not store your Slack data on any server. See our <a href="/privacy.html">Privacy Policy</a> for full details.</p>
+      <h2>Privacy</h2>
+      <p>Messages stay on your device. AIPA does not store your Slack data on any server. <a href="/privacy.html">Privacy Policy</a></p>
     </div>
 
     <footer class="footer">
